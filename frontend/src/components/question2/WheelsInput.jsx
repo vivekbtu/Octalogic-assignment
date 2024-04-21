@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React from 'react'
 import "../question2/WheelQ.css"
 
 const WheelsInput = ({ wheels, fetchVehicleTypes, setWheels }) => {

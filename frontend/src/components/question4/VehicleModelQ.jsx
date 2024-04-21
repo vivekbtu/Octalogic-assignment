@@ -1,7 +1,7 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React from 'react'
 import "../question4/VehicleModelQ.css";
 
-const VehicleModelQ = ({ vehicleModel, vehicleModels=[], onVehicleModelChange }) => {
+const VehicleModelQ = ({ vehicleModels=[], onVehicleModelChange }) => {
 
   return (
     <div className="q-wrapper">

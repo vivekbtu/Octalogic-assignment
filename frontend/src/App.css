@@ -1,13 +1,10 @@
 body {
     margin: auto;
-    background-image: url("../public/asset/background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #044945;
 }
 
 /* .q-wrapper {
