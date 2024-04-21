@@ -8,6 +8,7 @@ Fullstack
 
 ## Deplolyed App
 Frontend: [https://octalogic-vivek.netlify.app/]
+
 Backend: [https://octa-bac.onrender.com/bookings]
 
 ## Directory Structure
