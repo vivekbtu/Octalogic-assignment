@@ -1,0 +1,50 @@
+#q5-h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#q5-input label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+#q5-input input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+@media (max-width: 768px) {
+
+    form {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    form {
+        width: 90%;
+    }
+
+    button {
+        margin-top: 10px;
+    }
+}
