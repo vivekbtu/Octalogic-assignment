@@ -57,9 +57,9 @@ Backend: [https://octa-bac.onrender.com/bookings]
 - GET /api/bookings - retrieve all items
 - POST /api/bookings - create a new item
 - GET /api/veh/wheels/${wheels}
-    ```` [2, 4]
+    [2, 4]
 - GET /api/veh/types/${types}
-    ```["sports", 'cruiser', 'sedan', 'suv', 'hatchback']
+    ["sports", 'cruiser', 'sedan', 'suv', 'hatchback']
 
 
 ## Technology Stack
