@@ -11,10 +11,6 @@ Frontend: [https://octalogic-vivek.netlify.app/]
 
 Backend: [https://octa-bac.onrender.com/bookings]
 
-## Directory Structure
-├─ backend/
-├─ frontend/
-│  ├─ ...
 
 <!--- ## Video Walkthrough of the project
 [Attach a very short video walkthrough of all of the features [1 - 3 minutes]]
@@ -60,6 +56,11 @@ Backend: [https://octa-bac.onrender.com/bookings]
 ## API Endpoints
 - GET /api/bookings - retrieve all items
 - POST /api/bookings - create a new item
+- GET /api/veh/wheels/${wheels}
+    ```` [2, 4]
+- GET /api/veh/types/${types}
+    ```["sports", 'cruiser', 'sedan', 'suv', 'hatchback']
+
 
 ## Technology Stack
 - Node.js
