@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import "../viewBookingsPage/Bookings.css"
+import { Button } from '@chakra-ui/react'
 
 const Bookings = () => {
     const [data, setData] = useState([]);
@@ -62,15 +63,17 @@ const Bookings = () => {
                             {/* <td>{(booking.endDate)}</td> */}
                             <td>{new Date(booking.endDate).toLocaleDateString()}</td>
                             <td>
-                                <button onClick={() => handleDelete(booking.id)}>Delete</button>
+                                <Button colorScheme='blue' onClick={() => handleDelete(booking.id)}>Delete</Button>
                             </td>
                         </tr>
                     ))}
                 </tbody>
             </table>
+            <div className='homePageLink'>
             <Link to="/">
                 <p style={{ color: "red" }}>Back To Home Page</p>
             </Link>
+            </div>
         </>
     );
 }

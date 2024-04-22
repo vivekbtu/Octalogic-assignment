@@ -12,7 +12,8 @@
 }
 
 table {
-    width: 100%;
+    margin: auto;
+    width: 90%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
@@ -37,6 +38,13 @@ th {
 
 tbody tr:hover {
     color: red;
+}
+
+.homePageLink{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    /* width: 20%; */
 }
 
 /* Media Queries for Responsive Design */

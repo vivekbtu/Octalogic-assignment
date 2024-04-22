@@ -6,6 +6,7 @@ import VehicleTypeInput from '../question3/VehicleTypeInput';
 import VehicleModelQ from '../question4/VehicleModelQ';
 import { Link } from 'react-router-dom';
 import DatePicker from '../question5/DatePicker';
+import { Button, useToast } from '@chakra-ui/react'
 
 function BookingForm() {
   const [step, setStep] = useState(1);
@@ -19,6 +20,7 @@ function BookingForm() {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
 
+  const toast = useToast();
 
   const fetchVehicleTypes = async (wheels) => {
 
@@ -68,17 +70,38 @@ function BookingForm() {
 
   const handleNext = () => {
     if (step === 1 && (!firstName || !lastName)) {
-      alert('Please enter your first name and last name.');
+      // alert('Please enter your first name and last name.');
+      toast({
+        title: "Please enter your first name and last name.",
+        position: 'top-center',
+        status: "warning",
+        duration: 3000,
+        isClosable: true,
+      });
       return;
     }
   
     if (step === 2 && !wheels) {
-      alert('Please select the number of wheels.');
+      // alert('Please select the number of wheels.');
+      toast({
+        title: "Please select the number of wheels.",
+        position: 'top-center',
+        status: "warning",
+        duration: 3000,
+        isClosable: true,
+      });
       return;
     }
   
     if (step === 3 && !vehicleType) {
-      alert('Please select a vehicle type.');
+      // alert('Please select a vehicle type.');
+      toast({
+        title: "Please select a vehicle type.",
+        position: 'top-center',
+        status: "warning",
+        duration: 3000,
+        isClosable: true,
+      });
       return;
     }
   
@@ -109,11 +132,36 @@ function BookingForm() {
     const data = await response.json();
     if (response.ok) {
       // Handle success
-      alert(data.message);
+      // alert(data.message);
+      if(data.message === 'Booking created successfully'){
+        toast({
+          title: data.message,
+          position: 'top-center',
+          status: "success",
+          duration: 3000,
+          isClosable: true,
+        });
+      }
+      else{
+        toast({
+          title: data.message,
+          position: 'top-center',
+          status: "warning",
+          duration: 3000,
+          isClosable: true,
+        });
+      }
     } else {
       // Handle error
       console.error(data);
-      alert('An error occurred');
+      // alert('An error occurred');
+      toast({
+        title: 'An error occurred',
+        position: 'top-center',
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
     }
 
     // Handle the response as needed
@@ -173,20 +221,20 @@ function BookingForm() {
     <form onSubmit={handleSubmit}>
       {renderStep()}
       <div style={{ width: '40%', display: 'flex', justifyContent: 'space-between'}}>
-        {step !== 5 && <button type="button" onClick={handleNext}>Next</button>}
-        {step === 5 && <button type="submit">Submit</button>}
-        {step !== 1 && <button type="button" onClick={() => setStep(step - 1)}>Prev</button>}
+        {step !== 5 && <Button colorScheme='teal' size='md' type="button" onClick={handleNext}>Next</Button>}
+        {step === 5 && <Button colorScheme='teal' size='md' type="submit">Submit</Button>}
+        {step !== 1 && <Button colorScheme='teal' size='md' type="button" onClick={() => setStep(step - 1)}>Prev</Button>}
       </div>
 
-      {step === 5 && <Link to="/allbookings" style={{ textDecoration: 'none'}}>
+      {/* {step === 5 && <Link to="/allbookings" style={{ textDecoration: 'none'}}>
         <button type="button" style={{ backgroundColor: 'red', color: 'white' }}>Show All Bookings</button>
-      </Link>}
+      </Link>} */}
 
-      {step === 1 &&
+      {/* {step === 1 &&
         <Link to="/allbookings" style={{ textDecoration: 'none' }}>
           <button type="button" style={{ backgroundColor: 'red', color: 'white' }}>Show All Bookings</button>
         </Link>
-      }
+      } */}
     </form>
     
   );

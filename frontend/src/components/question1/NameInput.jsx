@@ -1,6 +1,7 @@
 import React from "react";
 // import { Link } from 'react-router-dom';
 import "../question1/UserQ.css"
+import { Input } from '@chakra-ui/react'
 
 const NameInput = ({ firstName, lastName, onFirstNameChange, onLastNameChange }) => {
 
@@ -10,7 +11,7 @@ const NameInput = ({ firstName, lastName, onFirstNameChange, onLastNameChange })
       <div id="q1-input">
         <label>
           First Name
-          <input
+          <Input
             type="text"
             name="firstName"
             id="firstName"
@@ -21,7 +22,7 @@ const NameInput = ({ firstName, lastName, onFirstNameChange, onLastNameChange })
         </label>
         <label>
           Last Name
-          <input
+          <Input
             type="text"
             name="lastName"
             id="lastName"
