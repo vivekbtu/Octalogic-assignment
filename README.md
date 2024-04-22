@@ -7,7 +7,7 @@ This project aims to provide users with a form that collects user information an
 Fullstack
 
 ## Deplolyed App
-Frontend: [https://octalogic-vivek.netlify.app/]
+Frontend: [https://vivek-octalogic.netlify.app/]
 
 Backend: [https://octa-bac.onrender.com/bookings]
 
